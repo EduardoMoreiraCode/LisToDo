@@ -1,13 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const darkModeStorage = localStorage.getItem('dark-mode');
     const html = document.querySelector('html');
-    const inputDarkMode = document.getElementById('input-dark-mode');
+    var inputDarkMode = document.getElementById('input-dark-mode');
     
-    // if(darkModeStorage){
-    //     html.setAttribute("dark", "true");
-    // }
+    if(darkModeStorage){
+        html.setAttribute("dark", "true");
+        inputDarkMode.checked = true;
+        document.querySelector(".img").src="sun-icon.png";
+    }
 
     inputDarkMode.addEventListener('change', () => {
+        
         if(inputDarkMode.checked){
             html.setAttribute("dark", "true");
             localStorage.setItem('dark-mode', true);
@@ -18,5 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.removeItem('dark-mode');
             document.querySelector(".img").src="moon-icon.png";
         }
-   })
+    });
 })
