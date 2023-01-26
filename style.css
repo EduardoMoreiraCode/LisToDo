@@ -14,7 +14,7 @@ body
     /* align-items: center; */
     /* justify-content: center;  */
     /* background: linear-gradient(90deg, rgba(65,184,131,1) 0%, rgba(0,212,255,1) 100%); */
-    background: linear-gradient(175deg, rgba(93,255,152,1) 0%, rgba(103,250,206,1) 35%, rgba(93,255,152,1) 100%);
+    background: linear-gradient(180deg, rgba(93,255,152,1) 0%, rgba(103,250,206,1) 35%, rgba(93,255,152,1) 100%);
     /* background-repeat: no-repeat; */
     background-size: cover;
     background-position: center center;
@@ -64,7 +64,7 @@ header h1
 
 body .container
 {
-    border: 2px solid #fff;
+    /* border: 2px solid #fff; */
     padding: 30px 40px;
     width: 40%;    
     min-width: 500px;
@@ -72,6 +72,7 @@ body .container
     left: 50%;
     position: relative;
     transform: translate(-50%,-50%);
+    max-height: 300px
 }
 
 .new-task-container
@@ -123,10 +124,11 @@ body .container
 {
     background-color: #fff;
     padding: 30px 20px;
+    margin-bottom: 0;
     margin-top: 60px;
     border-radius: 10px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
-    width: 100%;
+    width: 100%; 
 }
 
 .task-item
@@ -204,11 +206,6 @@ body .container
         margin-left: 0;
         width: 88%;
     }
-    
-    .new-task-container input
-    {
-        width:88%;
-    }
 }
 
 /* DARK MODE */
@@ -220,7 +217,7 @@ html[dark] .label img
 
 html[dark] body
 {
-    background: linear-gradient(175deg, rgba(43,43,43,1) 0%, rgba(83,83,83,1) 35%, rgba(42,42,42,1) 100%);
+    background: linear-gradient(180deg, rgba(43,43,43,1) 0%, rgba(83,83,83,1) 35%, rgba(43,43,43,1) 100%);
 }
 
 html[dark] header
