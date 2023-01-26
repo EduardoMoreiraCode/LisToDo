@@ -72,7 +72,7 @@ body .container
     left: 50%;
     position: relative;
     transform: translate(-50%,-50%);
-    max-height: 300px
+    max-height: 550px
 }
 
 .new-task-container
