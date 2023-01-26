@@ -72,7 +72,7 @@ body .container
     left: 50%;
     position: relative;
     transform: translate(-50%,-50%);
-    max-height: 550px
+    max-height: 450px
 }
 
 .new-task-container
@@ -191,6 +191,7 @@ body .container
         border: transparent !important;
         padding: 0 !important;
         min-width: 300px !important;
+        max-height: 550px !important;
     }
 
     .new-task-container
@@ -206,10 +207,10 @@ body .container
         margin-left: 0;
         width: 88%;
     }
-    
+
     .new-task-container input
     {
-        width:88%;
+        width: 88%;
     }
 }
 
