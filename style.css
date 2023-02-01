@@ -223,6 +223,28 @@ body .container
         /* Hablilitando screen rotation */
 }
 
+@media screen and (min-width:1000px) 
+{
+    .new-task-container
+    {
+        display: block;
+        text-align: center;
+    }
+
+    .new-task-button
+    {
+        margin-top: 15px;
+        padding: 12px 25%;
+        margin-left: 0;
+        width: 88%;
+    }
+
+    .new-task-container input
+    {
+        width: 88%;
+    }
+}
+
 /* DARK MODE */
 html[dark] .label img
 {
