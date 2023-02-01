@@ -214,6 +214,15 @@ body .container
     }
 }
 
+@media screen and (max-height:570px) and (min-width:319px) 
+{
+        .container
+        {
+            max-height: 150px !important;
+        } 
+        /* Hablilitando screen rotation */
+}
+
 /* DARK MODE */
 html[dark] .label img
 {
