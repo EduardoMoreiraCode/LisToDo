@@ -223,7 +223,7 @@ body .container
         /* Hablilitando screen rotation */
 }
 
-@media screen and (min-width:1000px) 
+@media screen and (min-width:601px) 
 {
     .new-task-container
     {
