@@ -52,4 +52,4 @@
 <p>A licença utilizada no projeto foi a <a href="https://mit-license.org/">MIT LICENSE</a>.</p>
 
 <h1 id="author">Autor</h1>
-<p>Projeto desenvolvido por <a href="https://github.com/EduDevCode" title="Eduardo M. dos S. Delfino">Eduardo M. dos S. Delfino</a>.</p>
+<p>Projeto desenvolvido por <a href="https://github.com/EduardoMoreiraCode" title="Eduardo M. dos S. Delfino">Eduardo M. dos S. Delfino</a>.</p>
