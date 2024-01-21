@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
+/* MAKE IT: DEIXAR HEADER FIXO NA ROLAGEM */
 
 body
 {
@@ -134,13 +134,20 @@ body .container
 .task-item
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 6px;
     margin-top: 6px;
 }
 
-.task-item i
+.icons-container
+{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.icons-container i
 {
     background-color: #41b883;
     color: #fff;
@@ -149,7 +156,7 @@ body .container
     cursor: pointer;
 }
 
-.task-item i:hover
+.icons-container i:hover
 {
     background-color: #369e6f;
 }
@@ -158,7 +165,7 @@ body .container
 {
     cursor: pointer;
     user-select: none;
-    width: 500px;
+    width: 60%;
     overflow-wrap: break-word;  
     word-wrap: break-word; 
     word-break: break-word;
@@ -212,19 +219,17 @@ body .container
     {
         width: 88%;
     }
-}
 
-@media screen and (max-height:570px) and (min-width:319px) 
-{
-        .container
-        {
-            max-height: 150px !important;
-        } 
-        /* Hablilitando screen rotation */
+    .icons-container
+    {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
 
 @media screen and (min-width:601px) 
 {
+    /* mudando todo o esquema do button se quiser apagar do github apague as linhas 226 a 246 */
     .new-task-container
     {
         display: block;
@@ -243,6 +248,15 @@ body .container
     {
         width: 88%;
     }
+}
+
+@media screen and (max-height:570px) and (min-width:319px) 
+{
+        .container
+        {
+            max-height: 150px !important;
+        } 
+        /* Hablilitando screen rotation */
 }
 
 /* DARK MODE */
