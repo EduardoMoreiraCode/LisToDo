@@ -7,16 +7,16 @@ const validateInput = () => inputElement.value.trim().length>0
     // msm coisa q fazer if return true
     // e else return false, ele ja da o
     //valor booleano
-
-const handleAddTask = () =>
-{
-    const inputIsValid = validateInput();
-
-    if(!inputIsValid)
+    
+    const handleAddTask = () =>
     {
-       return inputElement.classList.add("error");
-    }
-
+        const inputIsValid = validateInput();
+        
+        if(!inputIsValid)
+        {
+            return inputElement.classList.add("error");
+        }
+        
     const taskItemContainer = document.createElement('div');
     taskItemContainer.classList.add('task-item');
 
@@ -25,18 +25,36 @@ const handleAddTask = () =>
 
     taskContent.addEventListener('click', () => handleClick(taskContent));
 
-    const deleteItem = document.createElement('i');
-    deleteItem.classList.add("far");
-    deleteItem.classList.add("fa-trash-alt");
-
-    deleteItem.addEventListener('click', () => handleDeleteClick(taskItemContainer, taskContent));
-
+    const iconsContainer = (() => {
+        const container = document.createElement('div');
+        container.classList.add('icons-container');
+    
+        const editItem = document.createElement('i');
+        editItem.classList.add("fa");
+        editItem.classList.add("fa-pencil");
+        editItem.addEventListener('click', () => handleEditClick(taskContent, editItem));
+    
+        const deleteItem = document.createElement('i');
+        deleteItem.classList.add("far");
+        deleteItem.classList.add("fa-trash-alt");
+        deleteItem.addEventListener('click', () => handleDeleteClick(taskItemContainer, taskContent));
+    
+        container.appendChild(editItem);
+        container.appendChild(deleteItem);
+    
+        return container;
+    })(); //faz a funcao no proprio handleAddTask e ja tem o taskItemContainer
+    
     taskItemContainer.appendChild(taskContent);
-    taskItemContainer.appendChild(deleteItem);
+    taskItemContainer.appendChild(iconsContainer);
 
-    tasksContainer.appendChild(taskItemContainer);
+    tasksContainer.appendChild(taskItemContainer); 
+    //normal, um embaixo do outro
+    // tasksContainer.insertBefore(taskItemContainer, tasksContainer.firstChild);
+    //insere o taskItemContainer (nova task), antes do primeiro ou mais recente do container de tasks em geral
 
     inputElement.value = "";
+    
 
     updateLocalStorage();
 };
@@ -56,6 +74,16 @@ const handleClick = (taskContent) =>
 
     updateLocalStorage();
 };
+
+const handleEditClick = (taskContent, editItem) => {
+    const newDescription = prompt("Editar tarefa:", taskContent.innerText);
+
+    if (newDescription !== null) {
+        taskContent.innerText = newDescription;
+        updateLocalStorage();
+    }
+};
+
 
 const handleDeleteClick = (taskItemContainer, taskContent) =>
 {
@@ -134,15 +162,29 @@ const refreshTasksUsingLocalStorage = () =>
         }
     
         taskContent.addEventListener('click', () => handleClick(taskContent));
+
+        const iconsContainer = (() => {
+        const container = document.createElement('div');
+        container.classList.add('icons-container');
+    
+        const editItem = document.createElement('i');
+        editItem.classList.add("fa");
+        editItem.classList.add("fa-pencil");
+        editItem.addEventListener('click', () => handleEditClick(taskContent, editItem));
     
         const deleteItem = document.createElement('i');
         deleteItem.classList.add("far");
         deleteItem.classList.add("fa-trash-alt");
-    
         deleteItem.addEventListener('click', () => handleDeleteClick(taskItemContainer, taskContent));
     
+        container.appendChild(editItem);
+        container.appendChild(deleteItem);
+    
+        return container;
+        })();
+    
         taskItemContainer.appendChild(taskContent);
-        taskItemContainer.appendChild(deleteItem);
+        taskItemContainer.appendChild(iconsContainer);
     
         tasksContainer.appendChild(taskItemContainer);
     }
