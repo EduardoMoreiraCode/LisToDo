@@ -19,7 +19,9 @@
 <p><a href="https://listodo.vercel.app">LisToDo</a> é uma aplicação web com 100% de responsividade, que tem como objetivo a anotação e armazenamento de tarefas, com suas funcionalidades desenvolvidas com Javascript</p>
 
 <h1 id="functionalities">Funcionalidades</h1>
-<p>A funcionalidade geral da aplicação é servir de bloco de notas ou agenda. Além de armazenar tarefas na memória do navegador, conta com a opção de <a href="#dark" title="Dark Mode">Dark Mode (Modo Escuro)</a> e atalho da tecla "Enter" para adicionar tarefas à lista. Aliás, ao adicionar esta aplicação na tela de início do dispositivo, passa a funcionar como um aplicativo.</p>
+<p>A funcionalidade geral da aplicação é servir de bloco de notas ou agenda. Além de armazenar tarefas na memória do navegador, conta com a opção de <a href="#dark" title="Dark Mode">Dark Mode (Modo Escuro)</a>, atalho da tecla "Enter" para adicionar tarefas à lista e agora também com a função de <a href="#edit">Editar Tarefas</a> (apresentada logo abaixo).</p>
+<h2 id="edit">Editar Tarefas</h2>
+<h1 align="center"><img alt="Editar Tarefas" title="Editar Tarefas" src="./README-files/tasks-edit.png"/></h1>
 
 <h1 id="technologies">Tecnologias</h1>
 <p>As tecnologias utilizadas durante o desenvolvimento foram:
