@@ -165,7 +165,7 @@ body .container
 {
     cursor: pointer;
     user-select: none;
-    width: 60%;
+    width: 65%;
     overflow-wrap: break-word;  
     word-wrap: break-word; 
     word-break: break-word;
@@ -225,6 +225,13 @@ body .container
         flex-direction: column;
         gap: 5px;
     }
+
+    .task-item
+    {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
 }
 
 @media screen and (min-width:601px) 
